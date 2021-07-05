@@ -3,9 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import CategoryModule from './category/category.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { UserModule } from './user/user.module';
-import ProductModule from './product/product.module';
-import BrandModule from './brand/brand.module';
+
 
 @Module({
   imports: [
@@ -24,10 +22,7 @@ import BrandModule from './brand/brand.module';
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
     }),
-    CategoryModule,
-    UserModule,
-    ProductModule,
-    //BrandModule,
+    CategoryModule,   
   ],
 })
 export class AppModule {}
